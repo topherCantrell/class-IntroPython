@@ -19,22 +19,72 @@ Dewey Layman teaches this at UAH. My advanced course picks up where he leaves of
     - single, double, tripple quotes
     - comments    
   
-  * Core Data Types and Basic Operators
+  * (4) Core Data Types and Basic Operators
+    - built-in types
+    - literals
+    - expression operators
+    - built-in math functions
+    - utility modules (random, math, etc)
+    - shortcut assignment    
   
-  * Basic String Operations
+  * (7) Basic String Operations
+    - no "character" type ... just strings of one character
+    - immutable
+    - basic string operations
+    - string literals
+    - slash n and slash t and many others
+    - escape sequences
+    - quotes and double quotes
+    - len function
+    - 'r' strings (good for windows paths)
+    - string formatting type codes    
   
-  * Lists
+  * (8) Lists
+    - built-in object
+    - lists can contain anything
+    - lists are mutable
+    - accessed by offset
+    - literals
+    - operations
   
-  * Dictionaries
+  * (8) Dictionaries
+    - key/value maps
+    - position doesn't matter
+    - literals
+    - basic operations
   
-  * Conditions
+  * (12) Conditions
+    - if and elif and else
+    - basic syntax    
   
-  * Loops
+  * (13) Loops
+    - while
+    - while/else
+    - break, continue, pass
+    - iterator for-each
   
-  * Functions
+  * (16) Functions
+    - def and lambda
+    - global and nonlocal
+    - return and yield
+    - arguments and returns
+    - return statement
   
-  * Modules and Packages
+  * (22, 23, 24) Modules and Packages
+    - all the import flavors
+    - from
+    - __init__.py
   
-  * Classes and OOP
+  * (26 - 31) Classes and OOP
+    - classes
   
-  * File I/O and Exceptions
+  * (9) File I/O and Exceptions
+    - file open
+    - reading
+    - writing
+    - file operations (open, close, read, etc)
+    - try/except
+    - try/finally
+    - raise and assert
+    - try-except-else-finally
+      
