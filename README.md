@@ -1,11 +1,30 @@
 # Introduction to Python
 
-Dewey Layman teaches this at UAH. My advanced course picks up where he leaves off, so I'll document that course content here.
+Learn syntax rules along the way
 
-  * Environment and Tools
-    - Eclipse PyDev
-    - Command line
-    - Interactive vs Script Mode
+  * Introduction
+    - Environment, tools, hello world
+    - VM, bytecodes, disassembly
+    - Interactive vs script-mode
+    - Super important to ACTIVITY -- tinker, experimenting, finding ways to find the answer
+    - Stack-overflow
+    - Exercise - pull some scripts from the web, type some in, some REPL practice
+  * Functions
+  * Flow Control
+  * Types
+  
+  * Lists/algorithms (for each)
+  * Strings
+  * Dictionaries
+  * Files
+  
+  * Modules and Import
+  * Classes and OOP (private, constructors)
+  * Exceptions
+  * Doc strings
+  
+
+Dewey's course:
 
   * Statement and Syntax
     - Naming rules and characters
