@@ -1,8 +1,13 @@
 # Introduction to Python
 
+VM:
+  - Browser
+  - PyCharm https://www.jetbrains.com/pycharm/download/#section=windows
+
 Learn syntax rules along the way
 
   * Introduction
+    - Browser python. Pycharm.
     - Environment, tools, hello world
     - VM, bytecodes, disassembly
     - Interactive vs script-mode
@@ -10,6 +15,7 @@ Learn syntax rules along the way
     - Stack-overflow
     - Exercise - pull some scripts from the web, type some in, some REPL practice
   * Functions
+    - Comments
   * Flow Control
   * Types
   
