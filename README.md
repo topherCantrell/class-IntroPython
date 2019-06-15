@@ -1,5 +1,10 @@
 # Introduction to Python
 
+Remember to cover:
+  - Python 2, 3 and differences (mostly print) show web site
+  - How to tinker ... google (stack overflow)
+  - Command line arguments
+
 VM:
   - Browser
   - PyCharm https://www.jetbrains.com/pycharm/download/#section=windows
