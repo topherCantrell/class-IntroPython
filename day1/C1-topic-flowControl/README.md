@@ -143,3 +143,9 @@ while x<5:
     print(x)
 """
 ```
+
+## Recursion
+
+Show an infinite recursion and what happens on the stack. Show the blowup.
+
+Show the factorial example.
