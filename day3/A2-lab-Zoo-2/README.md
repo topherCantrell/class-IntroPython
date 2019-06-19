@@ -7,7 +7,7 @@ You will need to call these functions from the existing zoo.py module. Decide th
 place(s) to hook them in.
 
 Snippet of code to convert a dictionary to a string:
-```
+```python
 s = json.dumps(zoo)
 ```
 

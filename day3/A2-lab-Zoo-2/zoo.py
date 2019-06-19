@@ -1,28 +1,47 @@
+# syntax cheat sheet
 
-# Testing data
-ZOO = {
-    'question' : 'Does it live on land?',
-    'yes' : {
-        'question' : 'Does it live on a farm?',
-        'no' : 'lion',
-        'yes' : 'cow'
-        },
-    'no' : 'fish'
-    }
+# math ops parens, simple 'def' function calling a function
+# if/else/for/while/continue/break
+# [] operator, dot operator, open/close/random/input/print
+# 'with' example
+# dict and list literals ... complex example
 
-def get_yes_no():
-    """Ask the user for a 'yes' or 'no'.
-    :returns: either a 'yes' or a 'no'.
+import json
+
+def load_zoo():
+    f = open('zoo.json','r')
+    s = f.read()
+    f.close()
+    ret = json.loads(s)
+    return ret
+
+ZOO = load_zoo()
+
+def save_zoo():
+    s = json.dumps(ZOO)
+    f = open('zoo.json','w')
+    f.write(s)
+    f.close()
+
+def ask_yes_no():
+    """This function asks
+    :return: 'yes' or 'no' period
     """
     while True:
-        yn = input('yes/no: ')
-        if yn.upper().startswith('Y'):
-            return 'yes'
-        elif yn.upper().startswith('N'):
-            return 'no'
+        ans = input('yes/no : ')
+        ans = ans.strip()
+        ans = ans.upper()
+        if len(ans)>0:
+            if ans[0] == 'Y':
+                return 'yes'
+            elif ans[0] == 'N':
+                return 'no'
         else:
-            print("I don't understand.")
-            
+            print('???')
+
+
+    return ans
+
 def add_new_node(parent,guess_yes_no):
     # Get the animal we guessed (could have passed that in)
     old_animal = parent[guess_yes_no]
@@ -30,7 +49,7 @@ def add_new_node(parent,guess_yes_no):
     new_animal = input('What were you thinking of : ')
     new_question = input('Give me a yes/no question to separate '+new_animal+' from '+old_animal+' : ')
     print('What would the answer be for your animal : ')
-    new_ans = get_yes_no()
+    new_ans = ask_yes_no()
     # Make the new node
     new_node = {'question' : new_question}
     if new_ans=='yes':
@@ -41,37 +60,34 @@ def add_new_node(parent,guess_yes_no):
         new_node['yes'] = old_animal
     # Replace the guessed-animal with the new node
     parent[guess_yes_no] = new_node
-        
+
 def handle_node(node):
-    """Handle a single node in the zoo.
-    This function prints the question and gets the user's response.
-    :returns: the next question to process (or None if done)
-    """
+    # Return 'yes' or 'no' unless it is an
+    # animal ... I'll that
     print(node['question'])
-    ans = get_yes_no()
-    next = node[ans]
-    if type(next) is not str:
-        # This next node is dictionary. That's the next node
-        # to go to.
-        return next
-    else:
-        # This is a string. We've reached our guess animal.
-        print('Is it a',next,'?')
-        was_right = get_yes_no()
-        if was_right=='yes':
+    ans = ask_yes_no()
+    if type(node[ans])==str:
+        # This is an animal
+        print('Is it a', node[ans])
+        guess = ask_yes_no()
+        if guess=='yes':
             print('I got it!')
-            return None
         else:
             print('You stumped me!')
             add_new_node(node,ans)
-            return None
+            save_zoo()
+        return None
+    else:
+        return node[ans]
 
-p = ZOO
+load_zoo()
+
+cur_node = ZOO
 while True:
-    n = handle_node(p)
-    if n==None:
-        # This is the end. Start over.
-        print()
-        print("Let's play again.")
-        n = ZOO
-    p = n
+    p = handle_node(cur_node)
+    if p:
+        cur_node = p
+    else:
+        cur_node=ZOO
+
+
