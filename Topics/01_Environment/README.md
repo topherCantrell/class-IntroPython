@@ -1,5 +1,7 @@
 # The Python Environment
 
+Chapter/Section references from *Think Python* by Allen B. Downey. Text is NOT required.
+
 ## Syllabus
   * Environment: Command Line, REPL, Scripting
   * Environment: PyCharm
