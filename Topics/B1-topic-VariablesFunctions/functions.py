@@ -1,28 +1,12 @@
-def say_ha_why():
-    print("HA!")
-    print("Why,")
+def add_two(a,b):    
+    c = a + b
+    print(c)
+    a = 2 
+    b = 4
     
-def say_hi():
-    #print("HA!")
-    #print("Why,")
-    say_ha_why()
-    print("Hello")
-    print("There")
+a = 7
+b = 8
+add_two(a,b)
 
-def say_bye():
-    #print("HA!")
-    #print("Why,")
-    say_ha_why()
-    print("Bye")
-    print("Bye")
-    
-def come_and_go():
-    say_ha_why()
-    say_hi()
-    say_bye()
-    say_ha_why()
-    
-print('Start')
-say_ha_why()
-come_and_go()
-print('Done')
+add_two(10,20)
+

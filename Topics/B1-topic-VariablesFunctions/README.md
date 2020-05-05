@@ -10,19 +10,32 @@
     - Chapter 5: 11
     - Chapter 6: 1, 2, 3, 4, 5, 6,
     
-## Teach Functions First
+## We Should Teach Functions First!
+
+We used to teach variables and types first.
+
+### Using Functions
 
 Lines of code are grouped together in a function. A function has a name.
 A function has a list of parameters passed to it (might be none). A 
-function may return a value.
+function always returns a value (None by default).
 
 You know about the `print` function. You pass a value into it and it prints
 the value on the screen.
 
 ```python
 # What comes out on the screen?
+# Comments ... single line
 print(27)
 print('Hello World')
+print('Hello','There','World')
+
+# keyword arguments
+
+print('Hello','There','World',sep='###')
+
+x = print(27)
+# What's in X?
 ```
 
 ### Defining Functions
@@ -37,11 +50,11 @@ def say_hi():
 
 Rules:
   - Must start with def
-  - Name must start with a letter, thn can use numbers
+  - Name must start with a letter, then can use numbers
   - Open parenthesis, parameters (if any) close parenthesis:
   - Colon
   - Indented (other languages use {..})
-  - Recommended: lowercase with "_" between words
+  - Recommended snake-case: lowercase with "_" between words
 
 Now you can use `say_hi` like you use print.
 
@@ -55,93 +68,153 @@ say_hi()
 
 ### Functions calling functions
 
-Work this example showing the refactoring.
-
-Introduce the stack -- keeping track of where the program goes back to.
-
 ```python
-# functions.py
-def say_ha_why():
+def say_hi():
     print("HA!")
     print("Why,")
-    
-def say_hi():
-    #print("HA!")
-    #print("Why,")
-    say_ha_why()
     print("Hello")
     print("There")
-
+    
 def say_bye():
-    #print("HA!")
-    #print("Why,")
-    say_ha_why()
+    print("HA!")
+    print("Why,")
     print("Bye")
     print("Bye")
     
 def come_and_go():
-    say_ha_why()
     say_hi()
     say_bye()
-    say_ha_why()
     
 print('Start')
 say_hi()
-print('Done')
-
-# Now show the refactor
-
-print('Start')
-say_ha_why()
-come_and_go()
-print('Done')
+print('Done')    
 ```
 
-Must be defined before you call them. Not necessary in order in the file.
+And the refactor:
+
+```python
+def say_ha_why():
+    print("HA!")
+    print("Why,")
+    
+def say_hi():    
+    say_ha_why()
+    print("Hello")
+    print("There")
+
+def say_bye():    
+    say_ha_why()
+    print("Bye")
+    print("Bye")
+```
+
+Introduce the stack -- keeping track of where the program goes back to.
+
+SEE snippets1.pptx
+
+Show this in the debugger. Show the jumping around.
+
+Must be defined BEFORE YOU USE THEM. Not necessary in order in the file.
+
+```python
+
+# This is just a definition. The compiler processes it.
+def funA():
+    funB()
+    print("A")
+    
+This code runs as parsed, and funB is not defined yet.
+# funB()
+    
+def funB():
+    print("B")
+    
+# Everything is defined before funA calls funB
+funA()
+```
 
 ## Comments
 
 The '#' ... follows bash shells in linux so the sh-bang line will work
 
-No multi-line comment. You will see multi-line strings. Explain.
+No multi-line comment. You will see multi-line strings.
+
+```python
+
+a = 'hello there world'
+print(a)
+
+a = 'hello\nthere\nworld'
+print(a)
+
+a = '''hello
+there
+world'''
+print(a)
+
+def my_function():
+    print('hello')
+    
+    # What are these? Just wasted computations. But legal
+    5    
+    8+10    
+    'wow'
+    
+    '''and
+    this
+    now'''
+    
+    # can wrap code in multi-line comments to remove it
+    # IDEs can do "blocks of #"
+```
 
 ## Variables
 
-Local variables are hidden in the function. Other functions can have the
-same variable names. The variables go away when the function returns.
+SEE snippets2.pptx
 
-Variables are kept on the stack along with the return info. Work example:
+Local variables are kept on the stack along with the return information.
+When a function returns, all of its local variables go too.
+
+When you call a function, it does not have access to your local variables.
+The only local variables the CPU can see are the ones in the function it
+is currently running. Period. 
+
 
 ```python
-# variables.py
+def oh_man():
+    a = 20
+    b = 30
+    c = 40
+    
 def say_hi():
     print('Hello')
     a = 5
     b = 6
-    # Re-work example with "say_bye" here
+    oh_man()
     c = a + b
     print(c)
-    
-def say_bye():
-    print('Bye')
-    a = 2
-    b = 6
-    c = a + b
-    print(c)
-    
-# Show stack
 
-print('Start')
-say_bye()
+say_hi()
 print('Done')
 ```
 
+Variables are automatically created when you assign to them. They must
+be created before you can read from them.
+
 ## Parameters Passed to Functions
-```
-# params.py
-def add_two(a,b):
-    # local variables a and b are created here
-    # the incoming values are COPIED to the locals
+
+SEE snippets2.pptx
+
+Arguments become local variables. The VALUE of the passed argument is
+copied in. Now, before you get excited about pass-by-value, all values
+are pointers. So really we are passing by reference!
+
+We'll look more at the stack/heap next time.
+
+`global` variables later.
+
+```python
+def add_two(a,b):    
     c = a + b
     print(c)
     a = 2 # Doesn't affect the caller
@@ -156,13 +229,7 @@ add_two(10,20)
 
 ## Returns From Functions
 
-```
-# rets.py
-def say_hi():
-    print("Hello")
-    # Return is automatically added
-    return
-
+```python
 def add_two(a,b):
     c = a + b
     # This is how you return a value
@@ -182,10 +249,9 @@ Can return strings too.
 Pick up `input` here.
 
 ## Expressions and Substitution
-```
-# exp.py
+```python
 def add_two(a,b):
-    print("Adding",a,b) # multiple things on a line
+    print("Adding",a,b)
     c = a + b
     return c
 
@@ -210,17 +276,6 @@ print(z)
 ## Data Types (string, number, int, boolean)
 
 ```
-# At the interactive prompt
-
-# For demo ... notice the change of prompt
-def do_stuff():
-    aslkdfj
-    asdf
-    asdf
-    asdf
-    
-do_stuff()
-
 a = 5
 type(a)
 
@@ -287,3 +342,7 @@ And "*" ... string and int
 >>>
 
 ```
+
+## More
+
+If there is time, we can do id(x) and dir(x) here.
