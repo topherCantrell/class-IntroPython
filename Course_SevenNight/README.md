@@ -1,24 +1,24 @@
 # Seven Night Course
  
-| Day   | Topic                                 | Presentation                            |
-| ----- | -----                                 | -------                                 |
-| 1     | REPL, Scripts, and PyCharm            | 55 mins: [REPL, Scripts, and PyCharm]() |
-|       |                                       | 10 mins: Break                          |
-|       |                                       | 25 mins: [Exercise: HelloWorld]()       |
-|       | Variables, Operations, and Functions  | 55 mins: [Variables and Functions]()    |
-|       |                                       | 10 mins: Break                          |
-|       |                                       | 25 mins: [Exercise: Conversions]()      |
+| Day   | Topic                                    | Presentation                            |
+| ----- | -----                                    | -------                                 |
+| 1     | 1. REPL, Scripts, and PyCharm            | 55 mins: [REPL, Scripts, and PyCharm]() |
+|       |                                          | 10 mins: Break                          |
+|       |                                          | 25 mins: [Exercise: HelloWorld]()       |
+|       | 2. Variables, Operations, and Functions  | 55 mins: [Variables and Functions]()    |
+|       |                                          | 10 mins: Break                          |
+|       |                                          | 25 mins: [Exercise: Conversions]()      |
 | | | |
-| 2     | Logic and FLow                        | 55 mins: [Logic and Flow]()             |
-|       |                                       | 10 mins: Break                          |             
-|       |                                       | 25 mins: [Exercise: Hi/Lo Part 1]()     |
-|       | Modules and Import                    | 55 mins: [Modules and Import]()         |
+| 2     | 3. Logic and FLow                        | 55 mins: [Logic and Flow]()             |
+|       |                                          | 10 mins: Break                          |             
+|       |                                          | 25 mins: [Exercise: Hi/Lo]()            |
+|       | 4. Lists and Tuples                      | 55 mins: [Lists and Tuples]()           |
+|       |                                          | 10 mins: Break                          |
+|       |                                          | 25 mins: [List Loops]()                 |
+| | | |
+| 3     | Modules and Import                    | 55 mins: [Modules and Import]()         |
 |       |                                       | 10 mins: Break                          |
 |       |                                       | 25 mins: [Exercise: Hi/Lo Part 2]()     |
-| | | |
-| 3     | Lists and Tuples                      | 55 mins: [Lists and Tuples]()           |
-|       |                                       | 10 mins: Break                          |
-|       |                                       | 25 mins: [List Loops]()                 |
 |       | Dictionaries                          | 55 mins: [Dictionaries]()               |
 |       |                                       | 10 mins: Break                          |
 |       |                                       | 25 mins: [Exercise: The Zoo Part 1]()   |
