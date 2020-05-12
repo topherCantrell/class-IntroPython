@@ -1,12 +1,5 @@
 # Import is a verb
 
-  * Structuring projects
-  * How to see the import path
-  * The `__name__`, `__file__`, `__path__`
-  * The `__init__.py` and `__main__.py`
-  * pip
-  * py -m
-
 ## Example directory and files
 
 ```
