@@ -16,12 +16,12 @@
 |       |                                          | 10 mins: Break                          |
 |       |                                          | 25 mins: [List Loops]()                 |
 | | | |
-| 3     | Modules and Import                    | 55 mins: [Modules and Import]()         |
-|       |                                       | 10 mins: Break                          |
-|       |                                       | 25 mins: [Exercise: Hi/Lo Part 2]()     |
-|       | Dictionaries                          | 55 mins: [Dictionaries]()               |
-|       |                                       | 10 mins: Break                          |
-|       |                                       | 25 mins: [Exercise: The Zoo Part 1]()   |
+| 3     | 5. Dictionaries                          | 55 mins: [Dictionaries]()               |
+|       |                                          | 10 mins: Break                          |
+|       |                                          | 25 mins: [Exercise: The Zoo Part 1]()   |
+|       | 6. Modules and Import                    | 55 mins: [Modules and Import]()         |
+|       |                                          | 10 mins: Break                          |
+|       |                                          | 25 mins: [Exercise: Hi/Lo Part 2]()     |
 | | | |
 | 4     | Strings and Slicing                   | 55 mins: [Strings and Slicing]()        |
 |       |                                       | 10 mins: Break                          |
