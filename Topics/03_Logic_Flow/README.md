@@ -61,11 +61,9 @@ if(a==5) {
 }
 ```
 
-# ELIF
+## ELIF
 
 Python added an "elseif" to collapse the spacing. It produces the exact same code.
-
-SEE snippets.pptx
 
 ```
 if a==5:
@@ -78,7 +76,14 @@ else:
     print('OTHER')
     
 print('done')
-        
+
+```
+
+![](elif.jpg)
+
+## Logical expressions
+
+```        
 # if a>=1 and a<=10:
 
 if a>5 and a<4:
@@ -102,7 +107,11 @@ def is_it_five_forty():
     
 if is_it_five_forty():
     print('DING DING DING')
-    
+```
+
+## True-ness
+
+```
 # Python will asses the "true-ness" of a value
 if 1:
     print('1 is True')
@@ -182,6 +191,8 @@ for i in 'hello world':
 ```
 
 ## Recursion
+
+![](optional.jpg)
 
 ```
 def factiorial_by_loop(a):

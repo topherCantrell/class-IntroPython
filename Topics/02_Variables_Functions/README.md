@@ -100,7 +100,7 @@ def say_bye():
 
 Introduce the stack -- keeping track of where the program goes back to.
 
-SEE snippets1.pptx
+`SEE snippets1.pptx`
 
 Show this in the debugger. Show the jumping around.
 
@@ -160,7 +160,7 @@ def my_function():
 
 ## Variables
 
-SEE snippets2.pptx
+`SEE snippets2.pptx`
 
 Local variables are kept on the stack along with the return information.
 When a function returns, all of its local variables go too.
@@ -193,7 +193,7 @@ be created before you can read from them.
 
 ## Parameters Passed to Functions
 
-SEE snippets2.pptx
+`SEE snippets2.pptx`
 
 Arguments become local variables. The VALUE of the passed argument is
 copied in. Now, before you get excited about pass-by-value, all values
@@ -333,6 +333,19 @@ And "*" ... string and int
 
 ```
 
-## More
+# Operations
 
-If there is time, we can do id(x) and dir(x) here.
+  - `+` addition (ints are special)
+  - `-` subtraction (ints are special)
+  - `*` multiplication (ints are special)
+  - `/` division (always produces a float)
+  - `//` integer division
+  - `**` exponent
+  - `%` modulo  
+  - `<<` and `>>` bit shifts
+  - `~` logical not
+  - `&` and, `|` or, `^` xor
+  
+ Remember PEMDAS: parenthesis, exponents, mult, div, add, sub
+ 
+ Use parenthesis!

@@ -8,6 +8,13 @@
     - Chapter 10: All Sections
     - Chapter 12: All sections
     
+## Meet the dot "." operator
+
+This is how we access parts of an object or module.
+
+Python is extremely object-oriented. Nearly everything you deal with is an object. Number
+are objects ... functions are arguments.
+
 ## Lists
 
 Lists are objects. We create an empty list object like this:

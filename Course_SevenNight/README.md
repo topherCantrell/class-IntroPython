@@ -23,6 +23,13 @@
 |       |                                          | 10 mins: Break                          |
 |       |                                          | 25 mins: [Exercise: Hi/Lo Part 2]()     |
 | | | |
+
+
+1. Go over random ... tinkering and finding answers to API
+2. Strings and slicing
+3. MadLibs
+4. Zoo
+
 | 4     | Strings and Slicing                   | 55 mins: [Strings and Slicing]()        |
 |       |                                       | 10 mins: Break                          |
 |       |                                       | 25 mins: [Exercise: MadLibs]()          |                                                                                           

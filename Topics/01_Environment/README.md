@@ -257,6 +257,10 @@ C:\UAH\__pycache__>dir
 05/03/2020  04:59 PM               121 test.cpython-38.pyc
 ```
 
+## Disassembly
+
+![](optional.jpg)
+
 In case you ever want to see the opcodes:
 
 ```

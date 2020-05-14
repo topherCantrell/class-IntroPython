@@ -216,3 +216,19 @@ c = {
 print(c['phones']['work'])
 ```
 
+# Chasing Pointers
+
+```python
+
+a = [1,2,3]
+b = ['hello','world']
+
+a[1] = b
+
+# Change b ... a changes
+
+a = [1,2,3]
+a[2] = a
+a[2][2][2][2][2][2][2][2][2][2][2][2][0]
+
+# Print avoids a recursive loop
