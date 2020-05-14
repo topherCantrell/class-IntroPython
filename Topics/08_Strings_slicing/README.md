@@ -201,7 +201,7 @@ def get_subs(s):
     if i<0: # not found
       return ret
     j = s.find('>>',pos)
-    key = s[i+2,j]
-    ret.add(key)
+    key = s[i+2:j]
+    ret.append(key)
     pos = j+2
   
