@@ -1,4 +1,3 @@
-# Introduction to Python
+# Introduction to Python Topics
 
-  * [Online Course](Course_Online)
-  
+TODO Links and descriptions of everything
