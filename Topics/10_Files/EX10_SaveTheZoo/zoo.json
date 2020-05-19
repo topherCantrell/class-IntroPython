@@ -1,1 +1,1 @@
-{"question": "Is this a cool animal?", "no": {"question": "Does it have legs?", "yes": "lizard", "no": "Nope Rope"}, "yes": {"question": "Is it from down under?", "yes": "Wombat", "no": "Trash Panda"}}
+{"question": "Does it live on land?", "yes": {"question": "Does it live on a farm?", "no": "lion", "yes": "cow"}, "no": {"question": "Does it have 8 arms?", "yes": "octopus", "no": "fish"}}
