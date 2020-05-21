@@ -85,7 +85,7 @@ is a stand-alone thing that can be run anytime all by itself.
 
 Or in PyCharm:
 
-![](pycharmtest.py)
+![](pycharmtest.jpg)
 
 If you are using the automatic test finder, name your files "test_" and your tests starting with "test_".
 
