@@ -51,8 +51,7 @@ Naming conventions:
 
 ## OO programming is about the API -- what objects can do
 
-```
-python
+```python
 class Robot:
     
     def say_hi(self):
