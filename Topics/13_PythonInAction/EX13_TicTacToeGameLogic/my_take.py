@@ -1,7 +1,6 @@
 board = [' '] * 9
 
-def print_board():
-    #print(board)
+def print_board():    
     print(board[0]+'|'+board[1]+'|'+board[2])
     print('-+-+-')
     print(board[3]+'|'+board[4]+'|'+board[5])
@@ -9,12 +8,17 @@ def print_board():
     print(board[6]+'|'+board[7]+'|'+board[8])
 
 def get_move(token):
-    print_board()
-    print('Your move player',token)
-    m = input('Where do you want to go? ')
-    m = int(m)
-    # TODO: error checking
-    return m
+    while True:
+        print_board()
+        print('Your move player',token)
+        m = input('Where do you want to go? ')
+        try:
+            m = int(m)
+            if m>=0 and m<=8 and get_token(m)==' ':
+                return m            
+        except Exception:
+            pass
+        print('Invalid input')        
 
 def set_token(token,spot):
     board[spot] = token
@@ -60,7 +64,10 @@ while True:
         break
     m = get_move('O')
     set_token('O',m)
+    s = get_status()
     if s != 'Playing':
         break
+    
+print_board()
 print(s)
  
