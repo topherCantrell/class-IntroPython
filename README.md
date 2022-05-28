@@ -1,3 +1,5 @@
 # Introduction to Python Topics
 
-TODO Links and descriptions of everything
+TODO Links to topics
+
+# Things to Fix
